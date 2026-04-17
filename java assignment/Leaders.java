@@ -18,7 +18,7 @@ public class Leaders {
 
         for(int i = n - 1; i >= 0; i--){
             if(arr[i] > max){
-                result.addFirst(arr[i]); // no need to reverse
+                result.addFirst(arr[i]); 
                 max = arr[i];
             }
         }
