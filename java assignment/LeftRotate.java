@@ -24,15 +24,9 @@ public class LeftRotate {
 
         int k = sc.nextInt();
 
-        k = k % n;   // 🔥 important fix
-
-        // Step 1
+        k = k % n;   
         reverse(arr, 0, k-1);
-
-        // Step 2
         reverse(arr, k, n-1);
-
-        // Step 3
         reverse(arr, 0, n-1);
 
         System.out.println(Arrays.toString(arr));
