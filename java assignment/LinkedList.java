@@ -85,6 +85,24 @@ public class LinkedList {
 
     System.out.println("Sum of elements: " + sum);
   }
+  void printMax() {
+  if (head == null) {
+    System.out.println("LinkedList is Empty !!");
+    return;
+  }
+
+  int max = head.val;
+  Node curr = head.next;
+
+  while (curr != null) {
+    if (curr.val > max) {
+      max = curr.val;
+    }
+    curr = curr.next;
+  }
+
+  System.out.println("Greatest element: " + max);
+}
 
   public static void main(String[] args) {
     LinkedList ll = new LinkedList();
@@ -97,6 +115,7 @@ public class LinkedList {
     ll.deleteAtLast();
 
     ll.print();
-    ll.printSum();  // ✅ calling sum method
+    ll.printSum();  
+    ll.printMax();
   }
 }
